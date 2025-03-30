@@ -1,0 +1,13 @@
+public String changePi(String str) {
+  if(str.length() == 0){
+    return "";
+  }
+  int n = str.length();
+  if((n>1) && str.substring(0,2).equals("pi")){
+    return "3.14"+ changePi(str.substring(n-(n-2),str.length()));
+  }
+  if(n>=0){
+    return str.charAt(0)+changePi(str.substring(n-(n-1),str.length()));
+  }
+  return "";
+}
