@@ -1,0 +1,9 @@
+public int countHi(String str) {
+  if(str.length() == 0){
+    return 0;
+  }
+  if(str.length()>1){
+  return ((str.substring(str.length()-2,str.length()).equals("hi"))?1:0)+countHi(str.substring(0,str.length()-1));
+  }
+  return 0;
+}
