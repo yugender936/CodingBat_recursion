@@ -1,0 +1,14 @@
+public String allStar(String str) {
+ if(str.length()==0){
+    return "";
+  }
+  int n = str.length();
+  if(str.length()>1){
+  return str.charAt(0)+"*"+allStar(str.substring(n-(n-1),str.length()));
+  }
+  if(str.length() == 1){
+    return str.charAt(0) + allStar(str.substring(n-(n-1),str.length()));
+  }
+  
+  return "";
+}
