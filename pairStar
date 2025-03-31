@@ -1,0 +1,8 @@
+public String pairStar(String str) {
+  if(str.length() == 0){
+    return "";
+  }
+  int n = str.length();
+  return " " + pairStar(n-(n-1),str.length());
+
+}
