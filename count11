@@ -1,0 +1,12 @@
+public int count11(String str) {
+   if(str.length() < 2){
+     return 0;
+   }
+   if(str.startsWith("111")){
+     return 1 + count11(str.substring(2));
+   }
+   else if(str.startsWith("11")){
+     return 1 + count11(str.substring(1));
+   }
+   return count11(str.substring(1));
+}
