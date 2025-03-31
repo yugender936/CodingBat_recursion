@@ -1,0 +1,13 @@
+public int countAbc(String str) {
+  if(str.length() < 2){
+    return 0;
+  }
+  int n = str.length();
+  if(str.startsWith("abc")){
+    return 1 + countAbc(str.substring(1));
+  }
+  else if(str.startsWith("aba")){
+    return 1 + countAbc(str.substring(1));
+  }
+  return countAbc(str.substring(1));
+}
