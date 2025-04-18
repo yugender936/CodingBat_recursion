@@ -1,0 +1,16 @@
+public class Count_zeroes {
+
+	public static void main(String[] args) {
+		int n = 30210;
+		System.out.println(count(n));
+		int total = 0;
+		System.out.println(count1(n,total));
+
+	}
+	public static int count(int n) {
+		if(n == 0) {
+			return 0;
+		}
+		 return (n%10 == 0 ?1:0)+count(n/10);
+	}
+}
