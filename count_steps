@@ -1,0 +1,16 @@
+public class count_steps {
+
+	public static void main(String[] args) {
+		//count the number of steps taken to reduce the number to zero 
+		//if number is even divide by 2 and if number is odd reduce by 1
+        int n = 30;
+        
+        System.out.print(countSteps(n));
+	}
+	public static int countSteps(int n) {
+		if(n == 0) {
+			return 0;
+		}
+		return n%2 == 0 ? 1 + countSteps(n/2) : 1 + countSteps(n-1);
+	}
+}
